@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dytp1dooabnku"
-path="res://.godot/imported/MenowGift.png-a331a26bc119eca670753ffdca57dc53.ctex"
+uid="uid://bjatb47wqpx28"
+path="res://.godot/imported/Спрайты17.png-dbc2ae32ae003e2efec05b5212090e32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MenowGift.png"
-dest_files=["res://.godot/imported/MenowGift.png-a331a26bc119eca670753ffdca57dc53.ctex"]
+source_file="res://Спрайты17.png"
+dest_files=["res://.godot/imported/Спрайты17.png-dbc2ae32ae003e2efec05b5212090e32.ctex"]
 
 [params]
 
