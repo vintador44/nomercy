@@ -83,7 +83,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_nr8wp")
 }, {
-"duration": 3.0,
+"duration": 1.0,
 "texture": ExtResource("3_d2bti")
 }, {
 "duration": 1.0,
@@ -92,9 +92,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_flf07")
 }],
-"loop": true,
+"loop": false,
 "name": &"kick_up",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -152,7 +152,7 @@ sprite_frames = SubResource("SpriteFrames_4d7sh")
 animation = &"kick_up"
 
 [node name="Timer" type="Timer" parent="CharacterBody2D"]
-wait_time = 0.001
+wait_time = 0.3
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -163,4 +163,9 @@ drag_top_margin = 1.0
 drag_right_margin = 1.0
 drag_bottom_margin = 1.0
 
+[node name="attack_hold_timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="timeout" from="CharacterBody2D/Timer" to="CharacterBody2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="CharacterBody2D/attack_hold_timer" to="CharacterBody2D" method="_on_attack_hold_timer_timeout"]
