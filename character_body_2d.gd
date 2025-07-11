@@ -10,6 +10,7 @@ var attack_hold_timer :Timer
 var attack_velocity_jump = -700
 var is_holding = false
 var is_holding_attack = false
+var attack_area : Area2D
 
 
 func _ready():
@@ -17,7 +18,8 @@ func _ready():
 	attack_timer = $Timer
 	attack_hold_timer = $attack_hold_timer
 	attack_timer.one_shot = true
-	
+	attack_area = $AttackArea
+	add_to_group("player")
 
 
 
@@ -28,20 +30,25 @@ func get_input():
 	if is_attacking:
 		var right = Input.is_action_pressed('right')
 		var left = Input.is_action_pressed('left')
-		
+	
 		if right:
 			$AnimatedSprite2D.flip_h = false
+			attack_area.scale = Vector2(-1, 1)
 			velocity.x += run_speed * 0.5
 		elif left:
 			$AnimatedSprite2D.flip_h = true
 			velocity.x -= run_speed * 0.5
+			attack_area.scale = Vector2(1, 1)
 		return  # Выходим, чтобы не мешать анимации атаки
 	
 	# Движение и прыжки (оставляем без изменений)
 	var right = Input.is_action_pressed('right')
 	var left = Input.is_action_pressed('left')
 	var jump = Input.is_action_just_pressed('ui_select')
-	
+	if right:
+		attack_area.scale = Vector2(-1, 1)
+	elif left:
+		attack_area.scale = Vector2(1, 1)
 	if is_on_floor() and jump:
 		$AnimatedSprite2D.play("jump_up")
 		velocity.y = jump_speed
@@ -97,6 +104,11 @@ func _physics_process(delta):
 	# Обработка ввода
 	get_input()
 	
+	if is_attacking:
+		$AttackArea/CollisionShape2D.disabled = false
+	else:
+		$AttackArea/CollisionShape2D.disabled = true
+	
 	move_and_slide()
 
 
@@ -116,3 +128,15 @@ func _on_attack_hold_timer_timeout():
 		attack_cooldown = true
 		$AnimatedSprite2D.play("kick_up")  
 		attack_timer.start(0.75)
+
+
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	
+	if body.has_method("take_damage") and not $AttackArea/CollisionShape2D.disabled: 
+		print($AttackArea/CollisionShape2D.disabled)
+		var attack_data = {
+			"damage": 1, 
+			"source": self,  
+			"knockback": Vector2(0, -0.7) if is_holding_attack else Vector2(0.5, -0.3)
+		}
+		body.take_damage(attack_data)
