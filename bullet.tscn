@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpbseelu8welg"]
+
+[ext_resource type="Script" uid="uid://21som6j3kdk4" path="res://area_2d.gd" id="1_v7oki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7oki"]
+radius = 3.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_v8qja"]
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_v7oki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v7oki")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_v8qja")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

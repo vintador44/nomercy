@@ -28,3 +28,6 @@ top_level = true
 
 [node name="Enemy" parent="." instance=ExtResource("2_0e48y")]
 position = Vector2(510, 286)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(664, 290)

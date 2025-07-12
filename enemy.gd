@@ -9,21 +9,30 @@ var health = 200
 var knockback_power = 1000
 var knockback_timer: Timer
 var is_knockback_active = false
+var marker :Sprite2D
+var is_marker = false
 
 func _ready() -> void:
 	animation = $Sprite2D
-	# Создаем таймер для нокбэка
+	
 	knockback_timer = Timer.new()
 	add_child(knockback_timer)
 	knockback_timer.timeout.connect(_on_knockback_timer_timeout)
 	knockback_timer.one_shot = true
+	marker = $marker
+	add_to_group("enemy")
+	
 
 func _physics_process(delta):
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
 		return
 	
-	# Применяем гравитацию всегда
+	if is_marker:
+		marker.visible = true
+	else:
+		marker.visible = false
+	# Применяем 
 	velocity.y += gravity * delta
 	
 	# Только если нет нокбэка, преследуем игрока
