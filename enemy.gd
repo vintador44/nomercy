@@ -13,7 +13,7 @@ var marker :Sprite2D
 var is_marker = false
 
 func _ready() -> void:
-	animation = $Sprite2D
+	$AnimatedSprite2D.play("walk")
 	
 	knockback_timer = Timer.new()
 	add_child(knockback_timer)
@@ -40,9 +40,9 @@ func _physics_process(delta):
 		player_vector = (player.position - position).normalized()
 		
 		if player_vector.x > 0:
-			animation.flip_h = false
+			$AnimatedSprite2D.flip_h = false
 		else:
-			animation.flip_h = true
+			$AnimatedSprite2D.flip_h = true
 			
 		if is_on_floor():
 			velocity.x = player_vector.x * speed
