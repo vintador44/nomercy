@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq05if238g2y2"
-path="res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"
+uid="uid://ym760eowsywd"
+path="res://.godot/imported/emptyedwalk3.png-9caf603c5e1b8b3a9047f9324a10d2bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/diamantdreamer/diamantblock1.png"
-dest_files=["res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"]
+source_file="res://sprites/enemy/emptyedwalk3.png"
+dest_files=["res://.godot/imported/emptyedwalk3.png-9caf603c5e1b8b3a9047f9324a10d2bd.ctex"]
 
 [params]
 

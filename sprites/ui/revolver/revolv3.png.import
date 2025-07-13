@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq05if238g2y2"
-path="res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"
+uid="uid://i7ua4fk88n8t"
+path="res://.godot/imported/revolv3.png-e45e9d86341dd4c178d983664d7dcb44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/diamantdreamer/diamantblock1.png"
-dest_files=["res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"]
+source_file="res://sprites/ui/revolver/revolv3.png"
+dest_files=["res://.godot/imported/revolv3.png-e45e9d86341dd4c178d983664d7dcb44.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq05if238g2y2"
-path="res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"
+uid="uid://drp1h8320lx7u"
+path="res://.godot/imported/hp4.png-1143b1921910ac91bf9613d45026f06e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/diamantdreamer/diamantblock1.png"
-dest_files=["res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"]
+source_file="res://sprites/ui/health/hp4.png"
+dest_files=["res://.godot/imported/hp4.png-1143b1921910ac91bf9613d45026f06e.ctex"]
 
 [params]
 

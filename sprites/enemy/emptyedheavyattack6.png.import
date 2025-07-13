@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq05if238g2y2"
-path="res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"
+uid="uid://cdiy8hc7yga0k"
+path="res://.godot/imported/emptyedheavyattack6.png-dadba193baf1a711a6370f48a6b09ad8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/diamantdreamer/diamantblock1.png"
-dest_files=["res://.godot/imported/diamantblock1.png-1ad3973f51030059f326990483add642.ctex"]
+source_file="res://sprites/enemy/emptyedheavyattack6.png"
+dest_files=["res://.godot/imported/emptyedheavyattack6.png-dadba193baf1a711a6370f48a6b09ad8.ctex"]
 
 [params]
 
