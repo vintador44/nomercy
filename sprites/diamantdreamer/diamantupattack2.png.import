@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5w6kgaajn32w"
-path="res://.godot/imported/diamantattack3.png-82fc99b16f08e1e6f0100f224ece7c51.ctex"
+uid="uid://gvaw5txj26ok"
+path="res://.godot/imported/diamantupattack2.png-774f599ef2a5a3723904be00a8f5d0e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/diamantdreamer/diamantattack3.png"
-dest_files=["res://.godot/imported/diamantattack3.png-82fc99b16f08e1e6f0100f224ece7c51.ctex"]
+source_file="res://sprites/diamantdreamer/diamantupattack2.png"
+dest_files=["res://.godot/imported/diamantupattack2.png-774f599ef2a5a3723904be00a8f5d0e6.ctex"]
 
 [params]
 

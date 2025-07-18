@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://djosce3rm4sny"]
 
 [ext_resource type="PackedScene" uid="uid://bexmip77ngwfy" path="res://enemy.tscn" id="2_0e48y"]
-[ext_resource type="PackedScene" uid="uid://1uw7e4g08m0u" path="res://health_container.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" path="res://health_container.tscn" id="3_epypp"]
 [ext_resource type="PackedScene" uid="uid://bxdqxtly7rl7k" path="res://character_body_2d.tscn" id="30_2u7jv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
