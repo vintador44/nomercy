@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://djosce3rm4sny"]
+[gd_scene load_steps=6 format=3 uid="uid://djosce3rm4sny"]
 
 [ext_resource type="PackedScene" uid="uid://bexmip77ngwfy" path="res://enemy.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://1uw7e4g08m0u" path="res://health_container.tscn" id="3_epypp"]
 [ext_resource type="PackedScene" uid="uid://bxdqxtly7rl7k" path="res://character_body_2d.tscn" id="30_2u7jv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
@@ -29,5 +30,9 @@ top_level = true
 [node name="Enemy" parent="." instance=ExtResource("2_0e48y")]
 position = Vector2(510, 286)
 
-[node name="Enemy2" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(664, 290)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(2.5, 2.5)
+transform = Transform2D(2.5, 0, 0, 2.5, 0, 0)
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("3_epypp")]
+scale = Vector2(1.20313, 1.20313)

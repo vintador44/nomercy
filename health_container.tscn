@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://1uw7e4g08m0u"]
+
+[ext_resource type="Texture2D" uid="uid://feybv14nggdg" path="res://sprites/ui/uibg/uibg.png" id="1_ehijj"]
+[ext_resource type="PackedScene" uid="uid://dhs5docholg3l" path="res://health_1.tscn" id="2_xmx4q"]
+
+[node name="UI" type="Sprite2D"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_ehijj")
+centered = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.23
+anchor_top = 0.086
+anchor_right = 1.0
+anchor_bottom = 0.197
+offset_left = 2.56
+offset_top = 1.992
+offset_right = 174.0
+offset_bottom = 16.784
+scale = Vector2(0.335, 0.335)
+theme_override_constants/separation = 54
+
+[node name="health_1" parent="HBoxContainer" instance=ExtResource("2_xmx4q")]
+layout_mode = 2
+
+[node name="health_2" parent="HBoxContainer" instance=ExtResource("2_xmx4q")]
+layout_mode = 2
+
+[node name="health_3" parent="HBoxContainer" instance=ExtResource("2_xmx4q")]
+layout_mode = 2
+
+[node name="health_4" parent="HBoxContainer" instance=ExtResource("2_xmx4q")]
+layout_mode = 2
+
+[node name="health_5" parent="HBoxContainer" instance=ExtResource("2_xmx4q")]
+layout_mode = 2

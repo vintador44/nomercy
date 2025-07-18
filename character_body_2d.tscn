@@ -228,7 +228,7 @@ visibility_layer = 2
 position = Vector2(-5, 33)
 sprite_frames = SubResource("SpriteFrames_j6lyf")
 animation = &"parry"
-frame_progress = 0.263306
+frame_progress = 0.362329
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
@@ -257,6 +257,9 @@ position = Vector2(18, 0)
 shape = SubResource("RectangleShape2D_el80s")
 disabled = true
 
+[node name="KnockbackTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="attack_hold_timer" to="." method="_on_attack_hold_timer_timeout"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]

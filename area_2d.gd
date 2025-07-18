@@ -13,12 +13,13 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 # Если пуля во что-то врезается
 func _on_body_entered(body):
-	
+	var knockback_direction = (position.x- body.position.x )/abs(position.x- body.position.x )
+		
 	if body.has_method("take_damage"): 
 		var attack_data = {
 			"damage": 1, 
 			"source": self,  
-			"knockback":  Vector2(0.3, -0.2)
+			"knockback":  Vector2(0.3*-knockback_direction, -0.2)
 		}
 		body.take_damage(attack_data)
 	queue_free()  # Удаляем пулю

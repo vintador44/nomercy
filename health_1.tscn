@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhs5docholg3l"]
+
+[ext_resource type="Texture2D" uid="uid://baxx8q0g6d688" path="res://sprites/ui/health/hp1.png" id="1_m5lkp"]
+
+[node name="health_1" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.124
+anchor_top = 0.27
+anchor_right = 0.175
+anchor_bottom = 0.317
+offset_left = -142.848
+offset_top = -174.96
+offset_right = -144.6
+offset_bottom = -172.416
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-144, -174)
+texture = ExtResource("1_m5lkp")
+centered = false
